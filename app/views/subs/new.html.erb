@@ -1,0 +1,16 @@
+<h1>New SubPage</h1>
+
+<form  action="<%= subs_url %>" method="post">
+
+TITLE<input type="text" name="sub[title]" value="<%= @sub.title %>">
+DESCRIPTION<input type="text" name="sub[description]" value="<%= @sub.description %>">
+
+<%= auth_token %>
+
+
+<input type="submit" name="" value="Create Sub">
+</form>
+
+
+
+</form>

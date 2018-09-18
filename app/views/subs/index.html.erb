@@ -1,0 +1,10 @@
+<ul>
+
+
+<% @subs.each do |sup| %>
+<li>
+<a href="<%= sub_url(sup) %>">
+  <%= sup.title %></a></li>
+<% end %>
+
+</ul>

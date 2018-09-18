@@ -1,0 +1,16 @@
+<h1>Edit post</h1>
+
+<form class="" action="<%= post_url(@post) %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+<label>
+Title
+<input type="text" name="posts[title]" value="<%= @post.title %>">
+</label>
+
+<label>
+Content
+<input type="text" name="posts[content]" value="<%= @post.content %>">
+</label>
+
+<input type="submit" name="" value="Edit Post">
+</form>

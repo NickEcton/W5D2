@@ -1,0 +1,10 @@
+This Is <%= current_user.username %>'s Page!
+
+<form class="" action="<%= new_sub_url %>" method="get">
+<input type="submit" name="" value="Create New Sub!">
+</form>
+
+<% current_user.subs.each do |sub| %>
+<h3><a href="<%= sub_url(sub) %>"><%= sub.title %></a></h3>
+<br>
+<% end %>

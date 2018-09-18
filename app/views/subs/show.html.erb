@@ -1,0 +1,30 @@
+<h1><%= @sub.title %></h1>
+<br>
+<%= @sub.description %>
+<br>
+<%= @sub.moderator.username %>
+
+<h2>POSTS</h2>
+
+<% @sub.posts.each do |post| %>
+<%= post.title %>
+<%= post.content %>
+<br>
+<% end %>
+
+<form class="" action="<%=sub_posts_url(@sub) %>" method="post">
+<!-- <%# debugger %> -->
+Title: <input type="text" name="post[title]" value="">
+Content: <input type="text" name="post[content]" value="">
+
+<%= auth_token %>
+<input type="submit" name="" value="Make New Post">
+
+</form>
+
+<form class="" action="<%= edit_sub_url(@sub) %>" method="edit">
+  <input type="submit" name="" value="EDIT SUB">
+</form>
+<br>
+<br>
+<br>
